@@ -1,0 +1,20 @@
+proxy:
+  urlMapping:
+    www.jiraproxy.com: www.jira.com
+    www.confluenceproxy.com: www.confluence.com
+    www.jenkinsproxy.com: www.jenkins.com
+
+globalPolicy:
+  blockDnsList:
+    - www.jenkins.com
+
+userPolicies:
+    userPoliciesList:
+      - name: vignesh client
+        blockUrlList:
+          - www.confluence.com
+          - www.jenkins.com
+      - name: ravi client
+        blockUrlList:
+          - www.jira.com
+          - www.jenkins.com
